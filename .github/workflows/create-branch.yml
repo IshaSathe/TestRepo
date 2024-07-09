@@ -3,6 +3,9 @@ name: Workflow to Create Branch
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   Scenario_1:
     name: Default Inputs
