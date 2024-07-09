@@ -1,0 +1,22 @@
+---
+name: Workflow to Create Branch
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  Scenario_1:
+    name: Default Inputs
+    runs-on: ubuntu-latest
+    steps:
+      - id: checkout
+        name: Checkout
+        uses: actions/checkout@v4
+
+      - id: create_branch_default_inputs
+        name: Create Branch Default Inputs
+        uses: IshaSathe/CreateBranch@main
+        with:
+          token: $ {{ secrets.GITHUB_TOKEN }}
