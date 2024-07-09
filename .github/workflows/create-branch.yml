@@ -19,4 +19,7 @@ jobs:
         name: Create Branch Default Inputs
         uses: IshaSathe/CreateBranch@main
         with:
-          token: $ {{ secrets.GITHUB_TOKEN }}
+          initial-version: "0.1.0"
+          version-file: "version"
+          version-file-branch: "version"
+          token: ${{ secrets.GITHUB_TOKEN }}
