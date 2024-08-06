@@ -17,6 +17,7 @@ jobs:
 
       - id: run_error_action
         name: Run Error Action
+        continue-on-error: true
         uses: IshaSathe/ErrorMessageAction@main
         with:
           random-input: "1"
