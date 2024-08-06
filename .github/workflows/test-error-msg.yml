@@ -1,0 +1,31 @@
+---
+name: Workflow to test Error Message
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  Scenario_1:
+    name: Default Inputs
+    runs-on: ubuntu-latest
+    steps:
+      - id: checkout
+        name: Checkout
+        uses: actions/checkout@v4
+
+      - id: run_error_action
+        name: Run Error Action
+        uses: IshaSathe/ErrorMessageAction@main
+        with:
+          random-input: "1"
+
+      - id: collect_error
+        shell: bash
+        env:
+          ERROR_MESSAGE: "${{ steps.run_error_action.outputs.error_message }}"
+        run: |
+          echo "error message!!:"
+          echo $ERROR_MESSAGE
+          
