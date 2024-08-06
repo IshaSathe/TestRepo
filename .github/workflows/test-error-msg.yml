@@ -20,7 +20,7 @@ jobs:
         continue-on-error: true
         uses: IshaSathe/ErrorMessageAction@main
         with:
-          random-input: "1"
+          error-message: "this is my error message"
 
       - id: collect_error
         shell: bash
