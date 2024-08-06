@@ -1,5 +1,5 @@
 ---
-name: Workflow to Create Branch
+name: Workflow to test Error Message
 on:
   workflow_dispatch:
 
