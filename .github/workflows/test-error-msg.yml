@@ -1,5 +1,5 @@
 ---
-name: Workflow to test Error Message
+name: Test
 on:
   workflow_dispatch:
 
