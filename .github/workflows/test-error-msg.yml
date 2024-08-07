@@ -25,7 +25,7 @@ jobs:
       - id: collect_error
         shell: bash
         env:
-          ERROR_MESSAGE: "${{ steps.run_error_action.outcome }}"
+          ERROR_MESSAGE: "${{ env.CUSTOM_ERROR }}"
         run: |
           echo "error message!!:"
           echo $ERROR_MESSAGE
